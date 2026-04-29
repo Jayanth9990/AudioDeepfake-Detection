@@ -276,9 +276,9 @@ Please refer to the SafeEar README for citation information.
 **L3AC:**
 ```
 @article{zhai2024l3ac,
-  title={L3AC: Towards a Lightweight and Lossless Audio Codec},
+  title={L3AC: Towards a LightWeight and Lossless Audio Codec},
   author={Zhai, LW},
   journal={arXiv preprint arXiv:2504.04949},
   year={2024}
 }
-```
+```  
