@@ -1,0 +1,196 @@
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+`Trainer(limit_train_batches=1.0)` was configured so 100% of the batches per epoch will be used..
+`Trainer(limit_val_batches=1.0)` was configured so 100% of the batches will be used..
+Initializing distributed: GLOBAL_RANK: 0, MEMBER: 1/1
+----------------------------------------------------------------------------------------------------
+distributed_backend=nccl
+All distributed processes registered. Starting with 1 processes
+----------------------------------------------------------------------------------------------------
+
+wandb: WARNING The anonymous setting has no effect and will be removed in a future version.
+wandb: WARNING `resume` will be ignored since W&B syncing is set to `offline`. Starting a new run with run id qt8cqrg6.
+wandb: Tracking run with wandb version 0.25.1
+wandb: W&B syncing is set to `offline` in this directory. Run `wandb online` or set WANDB_MODE=online to enable cloud syncing.
+wandb: Run data is saved locally in Exps/ASVspoof21/logs/wandb/offline-run-20260318_020050-qt8cqrg6
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Instantiating datamodule <safeear.datas.asvspoof21.DataModule>
+Instantiating decouple model <safeear.models.decouple.SpeechTokenizer>
+Instantiating detect model <safeear.models.safeear.SafeEar1s>
+here!!! sinusoidal_embedding
+Instantiating system <safeear.trainer.safeear_trainer.SafeEarTrainer>
+Instantiating early_stopping <pytorch_lightning.callbacks.EarlyStopping>
+Instantiating checkpoint <pytorch_lightning.callbacks.ModelCheckpoint>
+Instantiating logger <pytorch_lightning.loggers.WandbLogger>
+Instantiating trainer <pytorch_lightning.Trainer>
+┏━━━┳━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃   ┃ Name           ┃ Type            ┃ Params ┃ Mode  ┃ FLOPs ┃
+┡━━━╇━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ 0 │ decouple_model │ SpeechTokenizer │  103 M │ train │     0 │
+│ 1 │ detect_model   │ SafeEar1s       │ 30.2 M │ train │     0 │
+│ 2 │ detect_loss    │ BCELoss         │      0 │ train │     0 │
+└───┴────────────────┴─────────────────┴────────┴───────┴───────┘
+Trainable params: 123 M                                                         
+Non-trainable params: 10.2 M                                                    
+Total params: 133 M                                                             
+Total estimated model params size (MB): 535                                     
+Modules in train mode: 269                                                      
+Modules in eval mode: 0                                                         
+Total FLOPs: 0                                                                  
+0.5704526
+-0.6186879
+Metric val_eer improved. New best score: 0.071
+Epoch 0, global step 12690: 'val_eer' reached 0.07064 (best 0.07064), saving model to '/home/sameera/unofficail_audio_deepfake/D3/SafeEar/Exps/ASVspoof21/checkpoints/epoch=0-val_eer=0.0706.ckpt' as top 1
+0.114339426
+-0.114535935
+Metric val_eer improved by 0.024 >= min_delta = 0.0. New best score: 0.046
+Epoch 1, global step 25380: 'val_eer' reached 0.04632 (best 0.04632), saving model to '/home/sameera/unofficail_audio_deepfake/D3/SafeEar/Exps/ASVspoof21/checkpoints/epoch=1-val_eer=0.0463.ckpt' as top 1
+0.24240598
+-0.24279179
+Epoch 2, global step 38070: 'val_eer' was not in top 1
+0.01929527
+-0.019298103
+Epoch 3, global step 50760: 'val_eer' was not in top 1
+0.004426293
+-0.004439808
+Epoch 4, global step 63450: 'val_eer' was not in top 1
+0.25503394
+-0.25560218
+Epoch 5, global step 76140: 'val_eer' was not in top 1
+0.062418353
+-0.062484425
+Epoch 6, global step 88830: 'val_eer' was not in top 1
+0.051562857
+-0.051567517
+Epoch 7, global step 101520: 'val_eer' was not in top 1
+0.008877043
+-0.0088828
+Epoch 8, global step 114210: 'val_eer' was not in top 1
+0.016805079
+-0.016809208
+Epoch 9, global step 126900: 'val_eer' was not in top 1
+0.010839978
+-0.01085178
+Epoch 10, global step 139590: 'val_eer' was not in top 1
+0.024621682
+-0.024715947
+Epoch 11, global step 152280: 'val_eer' was not in top 1
+0.0035829572
+-0.0035832569
+Epoch 12, global step 164970: 'val_eer' was not in top 1
+0.037627388
+-0.03762757
+Metric val_eer improved by 0.000 >= min_delta = 0.0. New best score: 0.046
+Epoch 13, global step 177660: 'val_eer' reached 0.04592 (best 0.04592), saving model to '/home/sameera/unofficail_audio_deepfake/D3/SafeEar/Exps/ASVspoof21/checkpoints/epoch=13-val_eer=0.0459.ckpt' as top 1
+0.042065296
+-0.042089
+Epoch 14, global step 190350: 'val_eer' was not in top 1
+0.006698559
+-0.0067287683
+Metric val_eer improved by 0.001 >= min_delta = 0.0. New best score: 0.045
+Epoch 15, global step 203040: 'val_eer' reached 0.04513 (best 0.04513), saving model to '/home/sameera/unofficail_audio_deepfake/D3/SafeEar/Exps/ASVspoof21/checkpoints/epoch=15-val_eer=0.0451.ckpt' as top 1
+0.047052298
+-0.04714003
+Epoch 16, global step 215730: 'val_eer' was not in top 1
+0.11865989
+-0.11872214
+Metric val_eer improved by 0.002 >= min_delta = 0.0. New best score: 0.044
+Epoch 17, global step 228420: 'val_eer' reached 0.04356 (best 0.04356), saving model to '/home/sameera/unofficail_audio_deepfake/D3/SafeEar/Exps/ASVspoof21/checkpoints/epoch=17-val_eer=0.0436.ckpt' as top 1
+0.043234482
+-0.0432641
+Metric val_eer improved by 0.005 >= min_delta = 0.0. New best score: 0.038
+Epoch 18, global step 241110: 'val_eer' reached 0.03807 (best 0.03807), saving model to '/home/sameera/unofficail_audio_deepfake/D3/SafeEar/Exps/ASVspoof21/checkpoints/epoch=18-val_eer=0.0381.ckpt' as top 1
+0.00583418
+-0.0058484743
+Epoch 19, global step 253800: 'val_eer' was not in top 1
+0.004815638
+-0.004817053
+Epoch 20, global step 266490: 'val_eer' was not in top 1
+0.0030631926
+-0.003074727
+Epoch 21, global step 279180: 'val_eer' was not in top 1
+0.0069782236
+-0.006978356
+Epoch 22, global step 291870: 'val_eer' was not in top 1
+0.009977002
+-0.0099883415
+Epoch 23, global step 304560: 'val_eer' was not in top 1
+0.004828111
+-0.0048567904
+Epoch 24, global step 317250: 'val_eer' was not in top 1
+0.0033709942
+-0.0033952582
+Epoch 25, global step 329940: 'val_eer' was not in top 1
+0.010830012
+-0.010834141
+Epoch 26, global step 342630: 'val_eer' was not in top 1
+0.011669294
+-0.011680556
+Epoch 27, global step 355320: 'val_eer' was not in top 1
+0.011399967
+-0.01140036
+Epoch 28, global step 368010: 'val_eer' was not in top 1
+0.00401645
+-0.0040214313
+Epoch 29, global step 380700: 'val_eer' was not in top 1
+0.002206133
+-0.0022063176
+Epoch 30, global step 393390: 'val_eer' was not in top 1
+0.0021653776
+-0.0021655345
+Epoch 31, global step 406080: 'val_eer' was not in top 1
+0.003631655
+-0.003642749
+Epoch 32, global step 418770: 'val_eer' was not in top 1
+0.0047891024
+-0.004790309
+Epoch 33, global step 431460: 'val_eer' was not in top 1
+0.0023416793
+-0.0023421363
+Epoch 34, global step 444150: 'val_eer' was not in top 1
+0.005265371
+-0.0052841804
+Epoch 35, global step 456840: 'val_eer' was not in top 1
+0.006617386
+-0.006617725
+Epoch 36, global step 469530: 'val_eer' was not in top 1
+0.004571485
+-0.0045762486
+Epoch 37, global step 482220: 'val_eer' was not in top 1
+0.0023317935
+-0.002333073
+Monitored metric val_eer did not improve in the last 20 records. Best score: 0.038. Signaling Trainer to stop.
+Epoch 38, global step 494910: 'val_eer' was not in top 1
+0.0025739037
+-0.0025782653
+Epoch 38/39 ━━━━━━━━━━━━━━ 12690/12690 0:07:24 •       28.86it/s v_num: qrg6    
+                                       0:00:00                   train_loss_ste…
+                                                                 0.003 val_loss:
+                                                                 0.000 val_eer: 
+                                                                 0.044          
+                                                                 train_loss_epo…
+                                                                 0.011          
+wandb: 
+wandb: Run history:
+wandb:               epoch ▁▁▁▁▁▁▁▂▂▂▂▂▂▂▂▃▃▃▄▄▄▄▄▄▄▅▅▆▆▆▇▇▇▇▇▇▇▇▇█
+wandb:                  lr ▃▃▃▄████████▇▇▇▇▆▆▆▆▅▅▅▄▄▄▄▃▃▃▂▂▂▂▂▁▁▁▁
+wandb:    train_loss_epoch █▄▄▄▇▆▅▄▄▃▃▃▃▃▃▂▂▂▂▂▂▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:     train_loss_step ▃▁▁▁▁▁▁▁▁▁▁▁▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁█▁▁▁▃▁▂▁▂▂
+wandb: trainer/global_step ▁▁▁▁▁▂▂▂▃▃▃▃▃▃▃▄▄▅▅▅▅▅▅▅▅▆▆▆▆▆▆▆▆▆▆▇▇▇██
+wandb:             val_eer █▃▃▄█▇▄▃▃▃▄▄▄▃▃▂▄▂▁▃▁▁▂▁▂▁▁▂▃▄▂▄▂▃▂▂▂▃▂
+wandb:            val_loss ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb: 
+wandb: Run summary:
+wandb:               epoch 38
+wandb:                  lr 1e-05
+wandb:    train_loss_epoch 0.01053
+wandb:     train_loss_step 1e-05
+wandb: trainer/global_step 494909
+wandb:             val_eer 0.04435
+wandb:            val_loss 0
+wandb: 
+wandb: You can sync this run to the cloud by running:
+wandb: wandb sync Exps/ASVspoof21/logs/wandb/offline-run-20260318_020050-qt8cqrg6
+wandb: Find logs at: Exps/ASVspoof21/logs/wandb/offline-run-20260318_020050-qt8cqrg6/logs
+Training finished!
+Closing wandb!
